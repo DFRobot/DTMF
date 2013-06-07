@@ -21,5 +21,6 @@ void loop()
   // Read DTMF codes one by one and print it on Serial
   int myDtmf;
   myDtmf = dtmf.getDTMF();
-  Serial.println(myDtmf);
+  if(myDtmf != -1) Serial.println(myDtmf);
+  delay(80); // to avoid getting repeated output.
 }
