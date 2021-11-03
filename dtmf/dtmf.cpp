@@ -64,7 +64,7 @@ int DTMF::getDTMF()
     if (digitalRead(_Q3) == HIGH) _reg = _reg + 4; 
     if (digitalRead(_Q4) == HIGH) _reg = _reg + 8;
 
-    if (_reg == 10) return '0';  
+    if (_reg == 10) return 0;  
     else if (_reg == 11) return '*';  
     else if (_reg == 12) return '#'; 
     else return _reg;
